@@ -37,26 +37,28 @@ while(identficacao>=1){
     if(peca<=20){
         folha_pagamento+= 1500;
         meta += peca;
-        alert(`${sexo(identficacao)};\nO funcionario ${identficacao} receberá R$${salario_mininmo};\nO total da folha de pagamento atual da fábrica é: ${folha_pagamento}; \n O número total de peças fabricadas: ${meta};\n A média de peças fabricadas pelos homens: ${media_pecas_homens};\nA média de peças fabricadas pelas mulheres: ${media_pecas_mulheres};\n O maior salário do trabalhador foi: ${salario_mininmo}.`);
+        alert(`${sexo(identficacao)};\nO funcionario ${identficacao} receberá R$${salario_mininmo};\nO total da folha de pagamento atual da fábrica é: ${folha_pagamento}; \n O número total de peças fabricadas: ${meta};\n A média de peças fabricadas pelos homens: ${media_pecas_homens};\nA média de peças fabricadas pelas mulheres: ${media_pecas_mulheres}.`);
         continue
     }
     if(peca<=30){
         meta += peca;
         aumento = (peca-20)*0.03;
-        salario_mininmo = salario_mininmo +(1500*aumento);
+        salario_mininmo = 1500 +(1500*aumento);
         folha_pagamento+= salario_mininmo;
-        alert(`${sexo(identficacao)};\nO funcionario ${identficacao} receberá R${salario_mininmo};\nO total da folha de pagamento atual da fábrica é: ${folha_pagamento}; \n O número total de peças fabricadas: ${meta};\n A média de peças fabricadas pelos homens: ${media_pecas_homens};\nA média de peças fabricadas pelas mulheres: ${media_pecas_mulheres};\n O maior salário do trabalhador foi: ${salario_mininmo}.`);
+        alert(`${sexo(identficacao)};\nO funcionario ${identficacao} receberá R${salario_mininmo};\nO total da folha de pagamento atual da fábrica é: ${folha_pagamento}; \n O número total de peças fabricadas: ${meta};\n A média de peças fabricadas pelos homens: ${media_pecas_homens};\nA média de peças fabricadas pelas mulheres: ${media_pecas_mulheres}.`);
         continue
     }
     if(peca>30){
         meta += peca;
         aumento = (peca-20)*0.05;
-        salario_mininmo = salario_mininmo +(1500*aumento);
+        salario_mininmo = 1500 +(1500*aumento);
         folha_pagamento+= salario_mininmo;
-        alert(`${sexo(identficacao)};\nO funcionario ${identficacao} receberá R$${salario_mininmo};\nO total da folha de pagamento atual da fábrica é: ${folha_pagamento}; \n O número total de peças fabricadas: ${meta};\n A média de peças fabricadas pelos homens: ${media_pecas_homens};\nA média de peças fabricadas pelas mulheres: ${media_pecas_mulheres};\n O maior salário do trabalhador foi: ${salario_mininmo}.`);
+        alert(`${sexo(identficacao)};\nO funcionario ${identficacao} receberá R$${salario_mininmo};\nO total da folha de pagamento atual da fábrica é: ${folha_pagamento}; \n O número total de peças fabricadas: ${meta};\n A média de peças fabricadas pelos homens: ${media_pecas_homens};\nA média de peças fabricadas pelas mulheres: ${media_pecas_mulheres}.`);
         continue
     }
     if(salario_mininmo > maior_salario){
         maior_salario = salario_mininmo;
+        alert(`O maior salário do trabalhador foi: ${maior_salario}.`)
+        continue
     }
 }
