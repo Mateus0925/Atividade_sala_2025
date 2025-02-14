@@ -5,7 +5,6 @@ async function buscarCarta() {
     try{
 
         const resposta = await fetch(url);//faz a requisição e armazena 
-
         //verificação
 
         if(!resposta.ok){
@@ -15,6 +14,7 @@ async function buscarCarta() {
         }
 
         const dados = await resposta.json();
+        console.log(dados)
 
         let img = document.getElementById("carta");
 
@@ -74,4 +74,27 @@ async function chamarAPI() {
     }
 }
 chamarAPI()
-*/
+*/const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+
+// Dados do novo usuário
+const novoUsuario = {
+    name: 'John Doe',
+    username: 'johndoe',
+    email: 'johndoe@example.com'
+};
+
+// Fazendo a requisição POST
+fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(novoUsuario)
+})
+    .then(response => response.json())
+    .then(data => {
+        console.log('Usuário criado:', data);
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
