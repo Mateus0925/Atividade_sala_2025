@@ -164,3 +164,8 @@ img{
     background-color: hsl(241, 81%, 54%);
     box-shadow: 0 2px 8px rgba(41, 35, 35, 0.295);
 }
+
+#botao:active{
+    transition: 0.5s;
+    transform: translate(0px, 2px);
+}
